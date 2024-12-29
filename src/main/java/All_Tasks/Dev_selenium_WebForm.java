@@ -1,10 +1,13 @@
 package All_Tasks;
 
 import java.awt.Color;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import javax.swing.text.Document;
 
+import org.checkerframework.common.reflection.qual.NewInstance;
 import org.checkerframework.dataflow.qual.AssertMethod;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -22,8 +25,9 @@ public class Dev_selenium_WebForm {
 		driver.get("https://www.selenium.dev/selenium/web/web-form.html");
 		driver.manage().window().maximize();
 		WebElement title = driver.findElement(By.className("display-6"));
-		System.out.println(title.getText());
-		if(title.equals("Web form"))
+		String firstName = title.getText();
+		System.out.println();
+		if(firstName.equals("Web form"))
 		{
 			System.out.println("Test case passed");
 		}
@@ -38,8 +42,7 @@ public class Dev_selenium_WebForm {
 		driver.findElement(By.cssSelector("textarea[name='my-textarea']")).sendKeys(text);
 		driver.findElement(By.linkText("Return to index")).click();
 		System.out.println(driver.getCurrentUrl());
-		//driver.navigate().back();
-		Thread.sleep(9000);
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("(//a[normalize-space()='blank.html'])[1]")).click();
 		System.out.println(driver.getCurrentUrl());
 		driver.navigate().back();
@@ -53,39 +56,23 @@ public class Dev_selenium_WebForm {
 		String filePath = "C:\\Users\\shubham.kori\\Downloads\\case1.png";
 		uploadFile.sendKeys(filePath);
 		driver.findElement(By.id("my-check-1")).click();
-		System.out.println("Checkbox is cleared");
+		System.out.println("First Checkbox is cleared");
 		driver.findElement(By.id("my-check-1")).click();
-		System.out.println("Checkbox is select");
+		System.out.println("Second Checkbox is select");
 		driver.findElement(By.id("my-check-2")).click();
-		System.out.println("Checkbox is selected");
+		System.out.println("Third Checkbox is selected");
 		driver.findElement(By.id("my-radio-2")).click();
-//		WebElement colorPicker = driver.findElement(By.name("my-colors"));
-//		String color = "#ff0000"; // Red
-//		((JavascriptExecutor) driver).executeScript("arguments[0].click();", color);
-		JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		WebElement datePicker = driver.findElement(By.name("my-date"));
+		SimpleDateFormat dateFormat = new SimpleDateFormat("mm/dd/yyyy");
+		String currentDate = dateFormat.format(new Date());
+		datePicker.sendKeys(currentDate);
+		System.out.println(datePicker.getText());
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
+		WebElement formSubmit = driver.findElement(By.xpath("//h1[@class=\"display-6\"]"));
+		System.out.println(formSubmit.getText());
 
-	    WebElement colorPicker = driver.findElement(By.name("my-colors")); 
-	    String initColor = colorPicker.getAttribute("value"); 
-	    System.out.println("The initial color is {}" + initColor);
-
-	    Color red = new Color(255, 0, 0, 1); 
-	    String script = String.format("arguments[0].setAttribute('value', '%s');", red.asHex());
-	    js.executeScript(script, colorPicker); 
-
-	    String finalColor = colorPicker.getAttribute("value"); 
-	    System.out.println("The final color is {}" + finalColor);
-	    assertThat(finalColor).isNotEqualTo(initColor); 
-	    assertThat(Color.fromString(finalColor)).isEqualTo(red);
-		
-		
-		
-		
-		
-		
-		
-
-		
-		//driver.quit();
+		driver.quit();
 	}
 
 }

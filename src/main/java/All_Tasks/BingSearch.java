@@ -4,9 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
 
 public class BingSearch {
 
@@ -15,14 +13,14 @@ public class BingSearch {
 
 		WebDriver driver = new ChromeDriver();
 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+
 		driver.get("https://www.bing.com/");
 		driver.manage().window().maximize();
-		
+
 		driver.findElement(By.xpath("//textarea[@id='sb_form_q']")).sendKeys("Selenium");
-		
-		
-		
+
+
+
 	}
 
 }

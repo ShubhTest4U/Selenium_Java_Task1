@@ -8,12 +8,12 @@ public class YoutubeSearch {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.youtube.com/");
 		driver.manage().window().maximize();
 		driver.findElement(By.xpath("//input[@role='combobox']")).sendKeys("Lofi songs");
-		
+
 	}
 
 }

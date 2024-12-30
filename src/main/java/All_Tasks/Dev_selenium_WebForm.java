@@ -1,16 +1,9 @@
 package All_Tasks;
 
-import java.awt.Color;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 
-import javax.swing.text.Document;
-
-import org.checkerframework.common.reflection.qual.NewInstance;
-import org.checkerframework.dataflow.qual.AssertMethod;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,7 +13,7 @@ public class Dev_selenium_WebForm {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-		
+
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.selenium.dev/selenium/web/web-form.html");
 		driver.manage().window().maximize();
@@ -35,7 +28,7 @@ public class Dev_selenium_WebForm {
 		{
 			System.out.println("Test case failed");
 		}
-		
+
 		driver.findElement(By.id("my-text-id")).sendKeys("Shubh");
 		driver.findElement(By.name("my-password")).sendKeys("Test");
 		String text = "My name is shubhma";
@@ -62,7 +55,7 @@ public class Dev_selenium_WebForm {
 		driver.findElement(By.id("my-check-2")).click();
 		System.out.println("Third Checkbox is selected");
 		driver.findElement(By.id("my-radio-2")).click();
-		
+
 		WebElement datePicker = driver.findElement(By.name("my-date"));
 		SimpleDateFormat dateFormat = new SimpleDateFormat("mm/dd/yyyy");
 		String currentDate = dateFormat.format(new Date());

@@ -20,7 +20,7 @@ public class Test {
 		List<WebElement> SuggestionList = driver.findElements(By.xpath("//div[@class='aajZCb']"));
 		System.out.println("Size of SuggestionList=" + SuggestionList.size());
 
-		for (WebElement ListIteam : SuggestionList) 
+		for (WebElement ListIteam : SuggestionList)
 		{
 			if(ListIteam.getText().contains("downloasd"))
 			{
@@ -29,9 +29,9 @@ public class Test {
 				break;
 			}
 		}
-		
 
-	
+
+
 
 }
 }

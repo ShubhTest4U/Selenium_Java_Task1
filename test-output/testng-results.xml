@@ -2,28 +2,39 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-12-30T22:37:37 IST" name="Default suite" finished-at="2024-12-30T22:37:54 IST" duration-ms="16900">
+  <suite started-at="2024-12-31T17:38:30 IST" name="Suite" finished-at="2024-12-31T17:38:43 IST" duration-ms="13346">
     <groups>
     </groups>
-    <test started-at="2024-12-30T22:37:37 IST" name="Default test" finished-at="2024-12-30T22:37:54 IST" duration-ms="16900">
-      <class name="testNG_Program.amazon_Testng">
-        <test-method is-config="true" signature="open_webpage()[pri:0, instance:testNG_Program.amazon_Testng@408d971b]" started-at="2024-12-30T22:37:37 IST" name="open_webpage" finished-at="2024-12-30T22:37:50 IST" duration-ms="13060" status="PASS">
+    <test started-at="2024-12-31T17:38:30 IST" name="Test" finished-at="2024-12-31T17:38:43 IST" duration-ms="13346">
+      <class name="testNG_Program.parameter_method">
+        <test-method signature="open_webpage(java.lang.String)[pri:0, instance:testNG_Program.parameter_method@5c90e579]" started-at="2024-12-31T17:38:30 IST" name="open_webpage" finished-at="2024-12-31T17:38:43 IST" duration-ms="13279" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://www.google.com/]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- open_webpage -->
-        <test-method signature="Mouse_Hover()[pri:0, instance:testNG_Program.amazon_Testng@408d971b]" started-at="2024-12-30T22:37:50 IST" name="Mouse_Hover" finished-at="2024-12-30T22:37:51 IST" duration-ms="1291" status="PASS">
+        <test-method signature="double_parameter(java.lang.String,java.lang.String)[pri:0, instance:testNG_Program.parameter_method@5c90e579]" started-at="2024-12-31T17:38:43 IST" name="double_parameter" finished-at="2024-12-31T17:38:43 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SHUBH]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Mouse_Hover -->
-        <test-method signature="Your_Orders()[pri:0, instance:testNG_Program.amazon_Testng@408d971b]" started-at="2024-12-30T22:37:51 IST" name="Your_Orders" finished-at="2024-12-30T22:37:54 IST" duration-ms="2339" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Your_Orders -->
-        <test-method is-config="true" signature="close()[pri:0, instance:testNG_Program.amazon_Testng@408d971b]" started-at="2024-12-30T22:37:54 IST" name="close" finished-at="2024-12-30T22:37:54 IST" duration-ms="152" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- testNG_Program.amazon_Testng -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- double_parameter -->
+      </class> <!-- testNG_Program.parameter_method -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testNG_Program.amazon_Testng">
+      <class name="testNG_Program.parameter_method">
         <methods>
-          <include name="close"/>
+          <include name="close_webpage"/>
           <include name="open_webpage"/>
-          <include name="Your_Orders"/>
+          <include name="double_parameter"/>
+          <include name="three_parameter"/>
         </methods>
-      </class> <!-- testNG_Program.amazon_Testng -->
+      </class> <!-- testNG_Program.parameter_method -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

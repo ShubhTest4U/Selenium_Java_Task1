@@ -5,14 +5,14 @@
     <classes>
       <class name="testNG_Program.parameter_method">
       <methods>
-      <parameter name="base_url" value="https://www.google.com/"/>
+      <parameter name="base_url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
       
       <include name="open_webpage"/>
-      <parameter name="Username" value="SHUBH"/>
-      <parameter name="Password" value="1234"/>
+      <parameter name="Username" value="Admin"/>
+      <parameter name="Password" value="admin123"/>
       <parameter name="Login" value="Welcome"/>
       <include name="double_parameter"/>
-      <include name="tree_parameter"/>
+      <exclude name="tree_parameter"/>
       <include name="close_webpage"/>
       
       </methods>
